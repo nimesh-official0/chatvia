@@ -67,13 +67,13 @@ const { log } = require("console");
 dotenv.config({ path: "./config.env" });
 
 /* ---------for Local database connection---------- */
-const DB = process.env.DATABASE_LOCAL;
+// const DB = process.env.DATABASE_LOCAL;
 
 /*--------for Atlas database connection----------*/
-// const DB = process.env.DATABASE.replace(
-//   "<password>",
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  "<password>",
+   process.env.DATABASE_PASSWORD
+);
 
 mongoose
   .connect(DB, {
